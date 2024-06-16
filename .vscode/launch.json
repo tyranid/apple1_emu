@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'apple1_emu'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=apple1_emu",
+                    "--package=apple1_emu"
+                ],
+                "filter": {
+                    "name": "apple1_emu",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'apple1_emu'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=apple1_emu",
+                    "--package=apple1_emu"
+                ],
+                "filter": {
+                    "name": "apple1_emu",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
